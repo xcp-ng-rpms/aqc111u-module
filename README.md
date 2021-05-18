@@ -1,4 +1,4 @@
-RPM sources for the aqc111-module package in XCP-ng (https://xcp-ng.org/).
+RPM sources for the aqc111u-module package in XCP-ng (https://xcp-ng.org/).
 
 Make sure to have `git-lfs` installed before cloning. It is used for handling source archives separately.
 
