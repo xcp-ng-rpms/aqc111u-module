@@ -9,7 +9,7 @@
 Summary: %{vendor_name} %{driver_name} device drivers
 Name: %{driver_name}-module
 Version: 1.3.3.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 License: GPL
 
 #Source taken from https://www.marvell.com/content/dam/marvell/en/drivers/AQ_USBDongle_LinuxDriver_1.3.3.0.zip
@@ -58,6 +58,9 @@ find %{buildroot}/lib/modules/%{kernel_version} -name "*.ko" -type f | xargs chm
 /lib/modules/%{kernel_version}/*/*.ko
 
 %changelog
+* Fri Sep 16 2022 Samuel Verschelde <stormi-xcp@ylix.fr> - 1.3.3.0-2
+- Rebuild for XCP-ng 8.3
+
 * Sun May 09 2021 Simone Conti <s.conti@itnok.com> - 1.3.3.0-1
 - Adding patch to rename kernel module from `aqc111` to `aqc111u`
 - Re-packing for XCP-ng of Marvell AQC111U driver
