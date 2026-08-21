@@ -9,7 +9,7 @@
 Summary: %{vendor_name} %{driver_name} device drivers
 Name: %{driver_name}-module
 Version: 1.3.3.0
-Release: 2%{?dist}
+Release: 3%{?dist}
 License: GPL
 
 #Source taken from https://www.marvell.com/content/dam/marvell/en/drivers/AQ_USBDongle_LinuxDriver_1.3.3.0.zip
@@ -18,7 +18,7 @@ Source0: %{driver_name}-%{version}.tar.gz
 Patch0: %{driver_name}-%{version}.patch
 
 BuildRequires: gcc
-BuildRequires: kernel-devel
+BuildRequires: kernel-devel >= 4.19.325-cip137.8.0.46.16
 Provides: %{driver_name}-module
 Requires: kernel-uname-r = %{kernel_version}
 Requires(post): /usr/sbin/depmod
@@ -58,6 +58,9 @@ find %{buildroot}/lib/modules/%{kernel_version} -name "*.ko" -type f | xargs chm
 /lib/modules/%{kernel_version}/*/*.ko
 
 %changelog
+* Mon Nov 16 2026 Quentin Casasnovas <quentin.casasnovas@vates.tech> - 1.3.3.0-3
+- Rebuild for kernel v4.19.325-cip137
+
 * Fri Sep 16 2022 Samuel Verschelde <stormi-xcp@ylix.fr> - 1.3.3.0-2
 - Rebuild for XCP-ng 8.3
 
