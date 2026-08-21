@@ -9,7 +9,10 @@
 Summary: %{vendor_name} %{driver_name} device drivers
 Name: %{driver_name}-module
 Version: 1.3.3.0
-Release: 2%{?dist}
+Release: 3%{?dist}
+# Built against new kABI after cip rebase
+Requires: xcpng-kernel-kabi = 4.19.325-cip134+
+
 License: GPL
 
 #Source taken from https://www.marvell.com/content/dam/marvell/en/drivers/AQ_USBDongle_LinuxDriver_1.3.3.0.zip
